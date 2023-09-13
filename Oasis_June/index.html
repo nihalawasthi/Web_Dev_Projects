@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=deviansce-width, initial-scale=1.0">
+	<meta name="keywords" content="" />
+	<meta name="description" content="Welcome to Nihal's Calculator" />
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="icon" type="image/ico" href="ico.ico?">
+
+	<title>Nihal's Calculator</title>
+</head>
+
+<body>
+	<section class="page">
+		<div class="Title">
+			<h1 class="title">Nihal's Calculator</h1>
+		</div>
+		<div class="calculator">
+			<input type="text" id="display" class="display" readonly>
+			<hr style="height: 3px; border-width:0;color:white;background-color:white; margin: 0; ">
+			<div class="inputs">
+				<div class="row">
+					<button class="input" onclick="appendCharacter('(')">(</button>
+					<button class="input" onclick="appendCharacter(')')">)</button>
+					<button class="ans" onclick="calculateResult()">Ans</button>
+					<button class="operator" onclick="backspace()">Del</button>
+					<button class="operator" onclick="clearDisplay()">AC</button>
+
+				</div>
+				<div class="row">
+					<button class="input" onclick="appendCharacter('7')">7</button>
+					<button class="input" onclick="appendCharacter('8')">8</button>
+					<button class="input" onclick="appendCharacter('9')">9</button>
+					<button class="operator" onclick="appendCharacter('%')">%</button>
+					<button class="operator" onclick="calculateSquareRoot()">√</button>
+				</div>
+				<div class="row">
+
+					<button class="input" onclick="appendCharacter('4')">4</button>
+					<button class="input" onclick="appendCharacter('5')">5</button>
+					<button class="input" onclick="appendCharacter('6')">6</button>
+					<button class="operator" onclick="appendCharacter('*')">×</button>
+					<button class="operator" onclick="appendCharacter('/')">÷</button>
+				</div>
+				<div class="row">
+					<button class="input" onclick="appendCharacter('1')">1</button>
+					<button class="input" onclick="appendCharacter('2')">2</button>
+					<button class="input" onclick="appendCharacter('3')">3</button>
+					<button class="operator" onclick="appendCharacter('+')">+</button>
+					<button class="operator" onclick="appendCharacter('-')">-</button>
+				</div>
+				<div class="row">
+					<button class="input" onclick="appendCharacter('.')">.</button>
+					<button class="input" onclick="appendCharacter('0')">0</button>
+					<button class="operator" onclick="appendCharacter('**')">^</button>
+					<button class="equals" onclick="calculateResult()">=</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
