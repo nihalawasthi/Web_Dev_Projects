@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+    <meta name="keywords" content="Nihal Awasthi, portfolio, Nihal, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
+    <meta name="description" content="Welcome to Nihal's Portfolio. Full-Stack Web Developer and Android App Developer" />
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/ico" href="https://nihalawasthi.github.io/images/Portfolio/img/img.ico?">
+
+    <title>Nihal Awasthi - To Do List</title>
+
+</head>
+
+<header class="header">
+  <a href="index.html"><img src="https://nihalawasthi.github.io/images/Portfolio/img/l.jpg" style="height: 45px; margin:0%; padding:1px;"></a>
+  <ul class="main-nav">
+      <li><a href="index.html" target="_blank">Home</a></li>
+      <li><a href="about.html" target="_blank">About</a></li>
+      <li><div class="dropdown">
+        <a href="portfolio.html" target="_blank">Portfolio <i class="fa fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <a href="portfolio.html#edu">Education</a>
+          <a href="portfolio.html#skills">Skills</a>
+          <a href="portfolio.html#experience">Experience</a>
+        </div>
+      </div></a></li>
+      <li><a href="to_do_list.html" target="_blank">To Do</a></li>
+      <li><a href="contact.html" target="_blank">Contact</a></li>
+  </ul>
+</header> 
+    
+    <hr style="height: 3px; border-width:0;color:white;background-color:white">
+    
+    <h1 style="text-align: center; padding:20px 0">To Do Priority List</h1>
+
+  <div class="face">
+    <div class="userInput">
+      <p>TASK INPUT</p>
+      <button class="btn btn-default" id="userInfoSave" onclick="addNewObject()">ADD NEW TASK</button>
+      <table id="inputTable" cellspacing="13">
+        <tr>
+          <td>
+            <h2>Description : <input id="taskDscrptn" maxlength="30" type=text style="padding: 0 4px;" placeholder="Enter The Task Description Here"></h2>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h2>Due Date : 
+            <select class="btn btn-default" id="hourSelect" style="padding: 1px 2px; text-align: center;">
+              <option value="0">12:00am</option>
+              <option value="1">1:00am</option>
+              <option value="2">2:00am</option>
+              <option value="3">3:00am</option>
+              <option value="4">4:00am</option>
+              <option value="5">5:00am</option>
+              <option value="6">6:00am</option>
+              <option value="7">7:00am</option>
+              <option value="8">8:00am</option>
+              <option value="9">9:00am</option>
+              <option value="10">10:00am</option>
+              <option value="11">11:00am</option>
+              <option value="12">12:00pm</option>
+              <option value="13">1:00pm</option>
+              <option value="14">2:00pm</option>
+              <option value="15">3:00pm</option>
+              <option value="16">4:00pm</option>
+              <option value="17">5:00pm</option>
+              <option value="18">6:00pm</option>
+              <option value="19">7:00pm</option>
+              <option value="20">8:00pm</option>
+              <option value="21">9:00pm</option>
+              <option value="22">10:00pm</option>
+              <option value="23">11:00pm</option>
+            </select>
+
+            <select class="btn btn-default" id="daySelect" style="padding: 1px 2px; text-align: center;">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option class="hideC showOpt" value="29">29</option>
+              <option class="hideB showOpt" value="30">30</option>
+              <option class="hideA showOpt" value="31">31</option>
+            </select>
+
+            <select class="btn btn-default" id="monthSelect" onclick="monthDaysFunc()" style="padding: 1px 2px; text-align: center;">
+              <option value="1">January</option>
+              <option value="2">February</option>
+              <option value="3">March</option>
+              <option value="4">April</option>
+              <option value="5">May</option>
+              <option value="6">June</option>
+              <option value="7">July</option>
+              <option value="8">August</option>
+              <option value="9">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
+
+            <select class="btn btn-default" id="yearSelect" onclick="monthDaysFunc()" style="padding: 1px 2px; text-align: center;"><i class="fa fa-caret-down"></i>
+              <option value="2015">2015</option>
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+            </select>
+          </h2>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h2>Importance Rating : 
+            <select class="btn btn-default" id="importanceSelect" style="text-align: center;">
+              <option value="1">⭐</option>
+              <option value="2">⭐⭐</option>
+              <option value="3">⭐⭐⭐</option>
+              <option value="4">⭐⭐⭐⭐</option>
+              <option value="5">⭐⭐⭐⭐⭐</option>
+            </select></h2>
+          </td>
+        </tr>
+      </table>
+      </div>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="displayTables">
+    <div class="unsorted">
+      <p style="padding-left: 6px;">UNRANKED TABLE</p>
+      <button id="deletion" class="btn btn-default" onclick="deleteItems()">DELETE SELECTED</button>
+      <table id="unsortedTaskTable" style="text-align: center;">
+        <tr>
+          <th>
+            <input type="checkbox" value="all" id="selectAll">
+          </th>
+          <th>
+            Task Description
+          </th>
+          <th>
+            Due Date
+          </th>
+        </tr>
+      </table>
+    </div>
+    <div class="ranked">
+      <p style="padding-left: 6px;">RANKED TABLE</p>
+      <button id="updateTime" class="btn btn-default" onclick="updateRankTable()">UPDATE COUNTDOWN</button>
+      <table id="rankedTaskTable" style="text-align: center;">
+        <tr>
+          <th>Rank</th>
+          <th>Task Description</th>
+          <th>Countdown</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <script src="automaticPriorityList.js"></script>
+
+  <hr style="height: 3px; border-width:0;color:white;background-color:white; margin:50px 0 20px 0;">
+
+    <section class="footer">
+          
+      <div class="box-container">
+    
+          <div class="box">
+              <h3>Nihal's Portfolio</h3>
+              <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> </p>
+          </div>
+    
+          <div class="box">
+              <h3>quick links</h3>
+              <a href="index.html#home"><i class="fas fa-chevron-circle-right"></i> home</a>
+              <a href="index.html#about"><i class="fas fa-chevron-circle-right"></i> about</a>
+              <a href="index.html#education"><i class="fas fa-chevron-circle-right"></i> education</a>
+          </div>
+    
+          <div class="box">
+              <h3>contact info</h3>
+              <p> <i class="fas fa-phone"></i>+91 635-048-6317</p>
+              <p> <i class="fas fa-envelope"></i>nihalawasthi498@gmail.com</p>
+              <p> <i class="fas fa-map-marked-alt"></i>Indore, India-452018</p>
+              <div class="share">
+    
+                  <a href="https://www.linkedin.com/in/nihal-awasthi-16a644251" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
+                  <a href="https://github.com/Morpheus498" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
+                  <a href="mailto:nihalawasthi498@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
+                  <a href="https://twitter.com/nihal-awasthi" class="fab fa-twitter" aria-label="Twitter" target="_blank"></a>
+                  <a href="https://t.me/" class="fab fa-telegram-plane" aria-label="Telegram" target="_blank"></a>
+              </div>
+          </div>
+      </div>
+    
+    </section>
+
+    <a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+       
+          <script>
+            document.addEventListener('visibilitychange',
+            function () {
+              if (document.visibilityState === "visible") {
+                document.title = "To Do List";
+                $("#favicon").attr("href", "assets/images/favicon.png");
+              }
+              else {
+                document.title = "Come Back To Site";
+                $("#favicon").attr("href", "assets/images/favhand.png");
+              }
+            });
+          </script>
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+          
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+          
+          <script src="./=js/particles.min.js"></script>
+          <script src="./js/app.js"></script>
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+          
+          <script src="https://unpkg.com/scrollreveal"></script>
+          
+          <script
+                type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+              ></script>
+          
+          <script src="js\todo.js"> </script>
+          <script src="./js/script.js"></script>
+  </body>
+</html>
