@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow: hidden;
+  font-family: "Manrope";
+  background: #010019;
+}
+
+canvas {
+  position: fixed;
+  width: 100vw;
+  min-height: 100%;
+}
+
+.centerCircle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 30px;
+  width: 30px;
+  border: 3px solid white;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.detailTitle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 2;
+  height: fit-content;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+
+  &--text {
+    color: white;
+    font-size: 64px;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    letter-spacing: 5px;
+    transform: translateY(70px);
+  }
+}
+
+.credits {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+  z-index: 4;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    transform: translateY(1px);
+    color: white;
+  }
+
+  &--noUnderline {
+    text-decoration: none;
+  }
+
+  &--sourceCode {
+    margin-left: 10px;
+  }
+
+  a {
+    color: white;
+
+    &:visited {
+      color: white;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.bottomGradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20vh;
+  z-index: 3;
+  background: linear-gradient(0deg, #010019b9 0%, rgba(0, 0, 0, 0) 100%);
+}
